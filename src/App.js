@@ -7,7 +7,7 @@ function App() {
   const [resultStorage, setResultStorage] = React.useState('0')
 
   function handleChange(e) {
-    if (input.length < 29) {
+    if (input.length < 31) {
       if (input === '' && e.target.value === '0') {
         return
       } else if (result.includes('.') && e.target.value === '.') {

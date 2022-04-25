@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
-@import url('http://fonts.cdnfonts.com/css/ds-digital');
+@font-face {
+  font-family: 'Digital';
+  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7')
+      format('svg');
+}
 
 * {
 	  user-select: none;
@@ -88,7 +100,7 @@ table {
 .input {
   margin: 6px;
   font-size: 1rem;
-  font-family: 'DS-Digital', sans-serif;
+  font-family: digital;
 
 }
 .result {
@@ -97,7 +109,7 @@ table {
   position:absolute;
   bottom:0;
   right:0;
-  font-family: 'DS-Digital', sans-serif;
+  font-family: digital;
 }
 
 .keys {
