@@ -9,6 +9,8 @@ function App() {
   function handleChange(e) {
     if (input === '' && e.target.value === '0') {
       return
+    } else if (result.includes('.') && e.target.value === '.') {
+        return
     } else if (input === '' && e.target.value === '.') {
         setInput('0.')
         setResult('0.')
@@ -22,6 +24,12 @@ function App() {
         setInput(input + e.target.value);
         setResult(e.target.value);
     } else if (result === '-') {
+        setInput(input + e.target.value);
+        setResult(e.target.value);
+    } else if (result === '*') {
+        setInput(input + e.target.value);
+        setResult(e.target.value);
+    } else if (result === '/') {
         setInput(input + e.target.value);
         setResult(e.target.value);
     } else {
@@ -55,6 +63,26 @@ function App() {
     }
   }
 
+  function handleMultiply() {
+    if (input.includes('=')) {
+      setInput(resultStorage + "*")
+      setResult('*')
+    } else if (input[input.length -1] !== '*') {
+        setInput(input + '*')
+        setResult("*");
+    }
+  }
+
+  function handleDivide() {
+    if (input.includes('=')) {
+      setInput(resultStorage + "/")
+      setResult('/')
+    } else if (input[input.length -1] !== '/') {
+        setInput(input + '/')
+        setResult("/");
+    }
+  }
+
   function handleEqual() {
     setInput(input + "=" + eval(input));
     setResult(eval(input))
@@ -65,18 +93,18 @@ function App() {
     <div className='calculatorContainer'>
       <div className='calculator'>
         <div className='outputContainer'>
-          <div id='display' className='input'>
+          <div className='input'>
             {input}
           </div>
-          <div className='result'>
+          <div id='display' className='result'>
             {result}
           </div>
         </div>
 
         <div className='keys'>
           <button id="clear" onClick={handleClear}>AC</button>
-          <button id="divide" onClick={handleChange} value="/">/</button>
-          <button id="multiply" onClick={handleChange} value="*">*</button>
+          <button id="divide" onClick={handleDivide} value="/">/</button>
+          <button id="multiply" onClick={handleMultiply} value="*">*</button>
           <button id="seven" onClick={handleChange} value={7}>7</button>
           <button id="eight" onClick={handleChange} value={8}>8</button>
           <button id="nine" onClick={handleChange} value={9}>9</button>
