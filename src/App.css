@@ -101,6 +101,7 @@ table {
   box-shadow: 0 0 5px 1px black;
   background-color: rgb(86, 86, 86);
   color: rgb(214, 210, 210);
+  cursor: pointer;
 } 
 
 .keys button:first-child {
