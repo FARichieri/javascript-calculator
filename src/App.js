@@ -47,6 +47,15 @@ function App() {
     if (input.includes('=')) {
       setInput(resultStorage + "+")
       setResult('+')
+    } else if (input[input.length -1] === '-') {
+       setInput(input.replace('-', '+'))
+       setResult('+')
+    } else if (input[input.length -1] === '*') {
+       setInput(input.replace('*', '+'))
+       setResult('+')
+    } else if (input[input.length -1] === '/') {
+       setInput(input.replace('/', '+'))
+       setResult('+')
     } else if (input[input.length -1] !== '+') {
         setInput(input + '+')
         setResult("+");
@@ -56,6 +65,10 @@ function App() {
   function handleSubtract() {
     if (input.includes('=')) {
       setInput(resultStorage + "-")
+      setResult('-')
+  
+   } else if (input[input.length -1] === '/') {
+      setInput(input.replace('/', '-'))
       setResult('-')
     } else if (input[input.length -1] !== '-') {
         setInput(input + '-')
@@ -85,8 +98,8 @@ function App() {
 
   function handleEqual() {
     setInput(input + "=" + eval(input));
-    setResult(eval(input))
-    setResultStorage(eval(input));
+    setResult(eval(input).toString())
+    setResultStorage(eval(input).toString());
   }
 
   return (
