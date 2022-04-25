@@ -50,7 +50,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Orbitron', sans-serif;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.944);
 }
 ol, ul {
 	list-style: none;
@@ -80,7 +80,7 @@ table {
   max-width: 355px;
   border: 1px solid rgba(0, 0, 0, 0.121);
   box-shadow: 0 0 10px 1px gray;
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 .outputContainer {
@@ -94,7 +94,7 @@ table {
   position: relative;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 .input {
@@ -118,7 +118,7 @@ table {
   padding: 10px 10px 45px 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: rgb(53, 53, 53);
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 0 0;
 }
 
 .keys button {
