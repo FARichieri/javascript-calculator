@@ -1,1 +1,1 @@
-You can see it live by clicking [here](https://frichieri-javascript-calculator.vercel.app/)
+You can see it live by clicking [here](https://frichieri-admin-dashboard.vercel.app/)
